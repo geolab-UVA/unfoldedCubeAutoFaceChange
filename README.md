@@ -9,6 +9,7 @@ Here are some things to know:
 
 The standard unfolding of the cube is 
 
+
 ```
  *********  *********  *********  *********
 
@@ -34,6 +35,7 @@ FRONT(0)   RIGHT(1)   BACK(5)    LEFT(3)
         
 *********  *********  *********  *********
 ```
+
 Note that some faces should also be rotated. 
 
 The desired "center" face is passed to the component by the parameter ```currentFace``` as in this line:
@@ -60,14 +62,16 @@ However the positions of those children are not specified in the HTML. We want t
 ## The component **cube-face-arranger.js**
 
 Upon intialization ```cube-face-arranger``` stores the parameter passed to it as a member variable ```this.currentFace```. This happens in this line in the ```init``` code
+
 ```
     this.currentFace = this.data.currentFace;
 ```
 
 The array ```this.faces``` stores references to the 6 faces of the cube. 
+
 ```
 this.faces = []; // This array (arrays are indexed from 0) will store the faces. 
-``
+```
 
 The function responsible for arranging the faces should be ```arrangeFaces```. Currently it is mainly empty
 
