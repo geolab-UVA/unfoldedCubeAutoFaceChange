@@ -92,6 +92,7 @@ AFRAME.registerComponent("cube-face-arranger", {
    * @returns {undefined}
    */
 
+  //test
 
   debug: function (what) {
     if (!Array.isArray(what)) {
