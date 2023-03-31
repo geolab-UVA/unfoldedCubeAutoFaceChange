@@ -45,39 +45,12 @@ update: function(){
   console.log("Current face updated!");
   this.currentFace = this.data.currentFace;
   console.log("currentFace = " + this.currentFace);
+  this.flushToDOM();
   this.arrangeFaces(); 
 
 },
 
   arrangeFaces: function () {
-    // Here you should perform operations to correctly arrange the faces
-
-    this.faces[0].object3D.position.x = 0;
-    this.faces[0].object3D.position.z = 0;
-
-    this.faces[1].object3D.position.x = 10;
-    this.faces[1].object3D.position.z = 0;
-
-    this.faces[2].object3D.position.x = 0;
-    this.faces[2].object3D.position.z = -10;
-
-    this.faces[3].object3D.position.x = -10;
-    this.faces[3].object3D.position.z = 0;
-
-    this.faces[4].object3D.position.x = 0;
-    this.faces[4].object3D.position.z = 10;
-
-    this.faces[5].object3D.position.x = 20;
-    this.faces[5].object3D.position.z = 0;
-
-    // Here are some examples:
-    // This changes the x coordinate of face 1 to 10
-    //this.faces[1].object3D.position.x = 10;
-
-    // Rotates the face the face by 45 degrees
-    //this.faces[1].object3D.rotation.y = Math.PI / 4;
-
-    // Here is a switch statement that
     switch (this.currentFace) {
       case 0:
         this.faces[0].object3D.position.x = 0;
@@ -97,8 +70,6 @@ update: function(){
 
         this.faces[5].object3D.position.x = 20;
         this.faces[5].object3D.position.z = 0;
-
-        console.log("currentFace = 0");
         break;
 
       case 1:
@@ -122,7 +93,6 @@ update: function(){
         this.faces[5].object3D.position.x = 10;
         this.faces[5].object3D.position.z = 0;
 
-        console.log("currentFace = 1");
         break;
 
       case 2:
@@ -148,7 +118,6 @@ update: function(){
         this.faces[5].object3D.position.z = -10;
         this.faces[5].object3D.rotation.y = Math.PI;
 
-        console.log("currentFace = 2");
         break;
 
       case 3:
@@ -172,7 +141,6 @@ update: function(){
           this.faces[5].object3D.position.x = -10;
           this.faces[5].object3D.position.z = 0;
 
-          console.log("currentFace = 3");
           break;
 
       case 4:
@@ -198,7 +166,6 @@ update: function(){
         this.faces[5].object3D.position.z = 10;
         this.faces[5].object3D.rotation.y = Math.PI;
 
-        console.log("currentFace = 4");
         break;
 
       case 5:
@@ -222,7 +189,6 @@ update: function(){
           this.faces[5].object3D.position.x = 0;
           this.faces[5].object3D.position.z = 0;
 
-          console.log("currentFace = 5");
           break;
     }
   },
