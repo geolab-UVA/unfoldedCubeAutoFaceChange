@@ -102,7 +102,7 @@ AFRAME.registerComponent("cube-face-arranger", {
 
         this.faces[2].object3D.position.x = 0;
         this.faces[2].object3D.position.z = -10;
-        this.faces[2].object3D.rotation.y = Math.PI / 2;
+        this.faces[2].object3D.rotation.y = Math.PI / (-2);
 
         this.faces[3].object3D.position.x = 20;
         this.faces[3].object3D.position.z = 0;
@@ -130,7 +130,7 @@ AFRAME.registerComponent("cube-face-arranger", {
   
         this.faces[3].object3D.position.x = -10;
         this.faces[3].object3D.position.z = 0;
-        this.faces[3].object3D.rotation.y = Math.PI / 2;
+        this.faces[3].object3D.rotation.y = Math.PI / (-2);
   
         this.faces[4].object3D.position.x = 20;
         this.faces[4].object3D.position.z = 0;
@@ -159,7 +159,7 @@ AFRAME.registerComponent("cube-face-arranger", {
   
           this.faces[4].object3D.position.x = 0;
           this.faces[4].object3D.position.z = 10;
-          this.faces[4].object3D.rotation.y = Math.PI / 2;
+          this.faces[4].object3D.rotation.y = Math.PI / (-2);
   
           this.faces[5].object3D.position.x = -10;
           this.faces[5].object3D.position.z = 0;
@@ -173,7 +173,7 @@ AFRAME.registerComponent("cube-face-arranger", {
 
         this.faces[1].object3D.position.x = 10;
         this.faces[1].object3D.position.z = 0;
-        this.faces[1].object3D.rotation.y = Math.PI / 2;
+        this.faces[1].object3D.rotation.y = Math.PI / (-2);
 
         this.faces[2].object3D.position.x = 20;
         this.faces[2].object3D.position.z = 0;
