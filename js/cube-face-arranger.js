@@ -127,24 +127,91 @@ AFRAME.registerComponent("cube-face-arranger", {
         break;
 
       case 2:
-        //this.faces[2].object3D.position.x = 0;
-        //this.faces[2].object3D.position.z = -10;
-        console.log("NOT YET IMPLEMENTED");
+        this.faces[0].object3D.position.x = 0;
+        this.faces[0].object3D.position.z = 10;
+
+        this.faces[1].object3D.position.x = 10;
+        this.faces[1].object3D.position.z = 0;
+  
+        this.faces[2].object3D.position.x = 0;
+        this.faces[2].object3D.position.z = 0;
+  
+        this.faces[3].object3D.position.x = -10;
+        this.faces[3].object3D.position.z = 0;
+  
+        this.faces[4].object3D.position.x = 20;
+        this.faces[4].object3D.position.z = 0;
+  
+        this.faces[5].object3D.position.x = 0;
+        this.faces[5].object3D.position.z = -10;
+
+        console.log("currentFace = 2");
         break;
+
       case 3:
-        //this.faces[3].object3D.position.x = -10;
-        //this.faces[3].object3D.position.z = 0;
-        console.log("NOT YET IMPLEMENTED");
+          this.faces[0].object3D.position.x = 10;
+          this.faces[0].object3D.position.z = 0;
+  
+          this.faces[1].object3D.position.x = 20;
+          this.faces[1].object3D.position.z = 0;
+  
+          this.faces[2].object3D.position.x = 0;
+          this.faces[2].object3D.position.z = -10;
+  
+          this.faces[3].object3D.position.x = 0;
+          this.faces[3].object3D.position.z = 0;
+  
+          this.faces[4].object3D.position.x = 0;
+          this.faces[4].object3D.position.z = 10;
+  
+          this.faces[5].object3D.position.x = -10;
+          this.faces[5].object3D.position.z = 0;
+
+        console.log("currentFace = 3");
         break;
+
       case 4:
-        //this.faces[4].object3D.position.x = 0;
-        //this.faces[4].object3D.position.z = 10;
-        console.log("NOT YET IMPLEMENTED");
+        this.faces[0].object3D.position.x = 0;
+        this.faces[0].object3D.position.z = -10;
+
+        this.faces[1].object3D.position.x = 10;
+        this.faces[1].object3D.position.z = 0;
+
+        this.faces[2].object3D.position.x = 20;
+        this.faces[2].object3D.position.z = 0;
+
+        this.faces[3].object3D.position.x = -10;
+        this.faces[3].object3D.position.z = 0;
+
+        this.faces[4].object3D.position.x = 0;
+        this.faces[4].object3D.position.z = 0;
+
+        this.faces[5].object3D.position.x = 0;
+        this.faces[5].object3D.position.z = 10;
+
+        console.log("currentFace = 4");
         break;
+
       case 5:
-        //this.faces[5].object3D.position.x = 20;
-        //this.faces[5].object3D.position.z = 0;
-        console.log("NOT YET IMPLEMENTED");
+          this.faces[0].object3D.position.x = 20;
+          this.faces[0].object3D.position.z = 0;
+  
+          this.faces[1].object3D.position.x = -10;
+          this.faces[1].object3D.position.z = 0;
+  
+          this.faces[2].object3D.position.x = 0;
+          this.faces[2].object3D.position.z = -10;
+  
+          this.faces[3].object3D.position.x = 10;
+          this.faces[3].object3D.position.z = 0;
+  
+          this.faces[4].object3D.position.x = 0;
+          this.faces[4].object3D.position.z = 10;
+  
+          this.faces[5].object3D.position.x = 0;
+          this.faces[5].object3D.position.z = 0;
+
+        console.log("currentFace = 5");
         break;
     }
   },
