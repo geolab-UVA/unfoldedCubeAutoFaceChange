@@ -19,9 +19,7 @@ AFRAME.registerComponent("cube-face-arranger", {
     // https://aframe.io/docs/1.4.0/introduction/writing-a-component.html
     // https://aframe.io/docs/1.4.0/introduction/writing-a-component.html#defining-properties-with-the-schema
 
-    this.currentFace = this.data.currentFace;
-    console.log("currentFace = " + this.currentFace);
-
+    
     // Store references to the faces with id face_X (X from 0 to 5)
 
     this.faces = []; // This array (arrays are indexed from 0) will store the faces.
@@ -38,38 +36,21 @@ AFRAME.registerComponent("cube-face-arranger", {
     console.log("faces = ");
     console.log(this.faces);
 
-    this.arrangeFaces(); // Call function
+    
   },
 
+update: function(){
+
+  // Update the current face and rearrange the faces
+  console.log("Current face updated!");
+  this.currentFace = this.data.currentFace;
+  console.log("currentFace = " + this.currentFace);
+  this.flushToDOM();
+  this.arrangeFaces(); 
+
+},
+
   arrangeFaces: function () {
-    // Here you should perform operations to correctly arrange the faces
-
-    this.faces[0].object3D.position.x = 0;
-    this.faces[0].object3D.position.z = 0;
-
-    this.faces[1].object3D.position.x = 10;
-    this.faces[1].object3D.position.z = 0;
-
-    this.faces[2].object3D.position.x = 0;
-    this.faces[2].object3D.position.z = -10;
-
-    this.faces[3].object3D.position.x = -10;
-    this.faces[3].object3D.position.z = 0;
-
-    this.faces[4].object3D.position.x = 0;
-    this.faces[4].object3D.position.z = 10;
-
-    this.faces[5].object3D.position.x = 20;
-    this.faces[5].object3D.position.z = 0;
-
-    // Here are some examples:
-    // This changes the x coordinate of face 1 to 10
-    //this.faces[1].object3D.position.x = 10;
-
-    // Rotates the face the face by 45 degrees
-    //this.faces[1].object3D.rotation.y = Math.PI / 4;
-
-    // Here is a switch statement that
     switch (this.currentFace) {
       case 0:
         this.faces[0].object3D.position.x = 0;
@@ -89,8 +70,6 @@ AFRAME.registerComponent("cube-face-arranger", {
 
         this.faces[5].object3D.position.x = 20;
         this.faces[5].object3D.position.z = 0;
-
-        console.log("currentFace = 0");
         break;
 
       case 1:
@@ -114,7 +93,6 @@ AFRAME.registerComponent("cube-face-arranger", {
         this.faces[5].object3D.position.x = 10;
         this.faces[5].object3D.position.z = 0;
 
-        console.log("currentFace = 1");
         break;
 
       case 2:
@@ -140,7 +118,6 @@ AFRAME.registerComponent("cube-face-arranger", {
         this.faces[5].object3D.position.z = -10;
         this.faces[5].object3D.rotation.y = Math.PI;
 
-        console.log("currentFace = 2");
         break;
 
       case 3:
@@ -164,7 +141,6 @@ AFRAME.registerComponent("cube-face-arranger", {
           this.faces[5].object3D.position.x = -10;
           this.faces[5].object3D.position.z = 0;
 
-          console.log("currentFace = 3");
           break;
 
       case 4:
@@ -190,7 +166,6 @@ AFRAME.registerComponent("cube-face-arranger", {
         this.faces[5].object3D.position.z = 10;
         this.faces[5].object3D.rotation.y = Math.PI;
 
-        console.log("currentFace = 4");
         break;
 
       case 5:
@@ -214,7 +189,6 @@ AFRAME.registerComponent("cube-face-arranger", {
           this.faces[5].object3D.position.x = 0;
           this.faces[5].object3D.position.z = 0;
 
-          console.log("currentFace = 5");
           break;
     }
   },
