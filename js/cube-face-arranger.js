@@ -19,9 +19,7 @@ AFRAME.registerComponent("cube-face-arranger", {
     // https://aframe.io/docs/1.4.0/introduction/writing-a-component.html
     // https://aframe.io/docs/1.4.0/introduction/writing-a-component.html#defining-properties-with-the-schema
 
-    this.currentFace = this.data.currentFace;
-    console.log("currentFace = " + this.currentFace);
-
+    
     // Store references to the faces with id face_X (X from 0 to 5)
 
     this.faces = []; // This array (arrays are indexed from 0) will store the faces.
@@ -38,8 +36,18 @@ AFRAME.registerComponent("cube-face-arranger", {
     console.log("faces = ");
     console.log(this.faces);
 
-    this.arrangeFaces(); // Call function
+    
   },
+
+update: function(){
+
+  // Update the current face and rearrange the faces
+  console.log("Current face updated!");
+  this.currentFace = this.data.currentFace;
+  console.log("currentFace = " + this.currentFace);
+  this.arrangeFaces(); 
+
+},
 
   arrangeFaces: function () {
     // Here you should perform operations to correctly arrange the faces
