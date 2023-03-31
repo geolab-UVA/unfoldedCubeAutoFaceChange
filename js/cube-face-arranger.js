@@ -23,17 +23,6 @@ AFRAME.registerComponent("cube-face-arranger", {
     console.log("currentFace = " + this.currentFace);
 
     // Store references to the faces with id face_X (X from 0 to 5)
-    /* The faces of the cube, in order from 0 to 5, are arranged as follows:
-    *********  *********  *********  *********
-
-    *********  TOP(2)     *********  *********
-
-    LEFT(3)    FRONT(0)   RIGHT(1)   BACK(5)
-
-    *********  BOTTOM(4)  *********  *********
-    
-    *********  *********  *********  *********
-  */
 
     this.faces = []; // This array (arrays are indexed from 0) will store the faces.
 
@@ -101,7 +90,7 @@ AFRAME.registerComponent("cube-face-arranger", {
         this.faces[5].object3D.position.x = 20;
         this.faces[5].object3D.position.z = 0;
 
-        console.log("HERE YOU SHOULD PUT CODE THAT DEALS WITH currentFace = 0");
+        console.log("currentFace = 0");
         break;
 
       case 1:
@@ -113,12 +102,14 @@ AFRAME.registerComponent("cube-face-arranger", {
 
         this.faces[2].object3D.position.x = 0;
         this.faces[2].object3D.position.z = -10;
+        this.faces[2].object3D.rotation.y = Math.PI / 2;
 
         this.faces[3].object3D.position.x = 20;
         this.faces[3].object3D.position.z = 0;
 
         this.faces[4].object3D.position.x = 0;
         this.faces[4].object3D.position.z = 10;
+        this.faces[4].object3D.rotation.y = Math.PI / 2;
 
         this.faces[5].object3D.position.x = 10;
         this.faces[5].object3D.position.z = 0;
@@ -132,18 +123,22 @@ AFRAME.registerComponent("cube-face-arranger", {
 
         this.faces[1].object3D.position.x = 10;
         this.faces[1].object3D.position.z = 0;
+        this.faces[1].object3D.rotation.y = Math.PI / 2;
   
         this.faces[2].object3D.position.x = 0;
         this.faces[2].object3D.position.z = 0;
   
         this.faces[3].object3D.position.x = -10;
         this.faces[3].object3D.position.z = 0;
+        this.faces[3].object3D.rotation.y = Math.PI / 2;
   
         this.faces[4].object3D.position.x = 20;
         this.faces[4].object3D.position.z = 0;
+        this.faces[4].object3D.rotation.y = Math.PI;
   
         this.faces[5].object3D.position.x = 0;
         this.faces[5].object3D.position.z = -10;
+        this.faces[5].object3D.rotation.y = Math.PI;
 
         console.log("currentFace = 2");
         break;
@@ -157,18 +152,20 @@ AFRAME.registerComponent("cube-face-arranger", {
   
           this.faces[2].object3D.position.x = 0;
           this.faces[2].object3D.position.z = -10;
+          this.faces[2].object3D.rotation.y = Math.PI / 2;
   
           this.faces[3].object3D.position.x = 0;
           this.faces[3].object3D.position.z = 0;
   
           this.faces[4].object3D.position.x = 0;
           this.faces[4].object3D.position.z = 10;
+          this.faces[4].object3D.rotation.y = Math.PI / 2;
   
           this.faces[5].object3D.position.x = -10;
           this.faces[5].object3D.position.z = 0;
 
-        console.log("currentFace = 3");
-        break;
+          console.log("currentFace = 3");
+          break;
 
       case 4:
         this.faces[0].object3D.position.x = 0;
@@ -176,18 +173,22 @@ AFRAME.registerComponent("cube-face-arranger", {
 
         this.faces[1].object3D.position.x = 10;
         this.faces[1].object3D.position.z = 0;
+        this.faces[1].object3D.rotation.y = Math.PI / 2;
 
         this.faces[2].object3D.position.x = 20;
         this.faces[2].object3D.position.z = 0;
+        this.faces[2].object3D.rotation.y = Math.PI;
 
         this.faces[3].object3D.position.x = -10;
         this.faces[3].object3D.position.z = 0;
+        this.faces[3].object3D.rotation.y = Math.PI / 2;
 
         this.faces[4].object3D.position.x = 0;
         this.faces[4].object3D.position.z = 0;
 
         this.faces[5].object3D.position.x = 0;
         this.faces[5].object3D.position.z = 10;
+        this.faces[5].object3D.rotation.y = Math.PI;
 
         console.log("currentFace = 4");
         break;
@@ -201,18 +202,20 @@ AFRAME.registerComponent("cube-face-arranger", {
   
           this.faces[2].object3D.position.x = 0;
           this.faces[2].object3D.position.z = -10;
+          this.faces[2].object3D.rotation.y = Math.PI;
   
           this.faces[3].object3D.position.x = 10;
           this.faces[3].object3D.position.z = 0;
   
           this.faces[4].object3D.position.x = 0;
           this.faces[4].object3D.position.z = 10;
+          this.faces[4].object3D.rotation.y = Math.PI;
   
           this.faces[5].object3D.position.x = 0;
           this.faces[5].object3D.position.z = 0;
 
-        console.log("currentFace = 5");
-        break;
+          console.log("currentFace = 5");
+          break;
     }
   },
 
